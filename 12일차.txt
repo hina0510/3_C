@@ -1,0 +1,72 @@
+배열 : 같은 자료형으로 여러개의 공간을 만드는 것
+  형식 : 자료형 : 배열명[index] index는 0부터 시작
+           scanf_s("%d", arr);		배열명에는 & 붙이지 않음
+           scanf_s("%d", &arr[i]);	배열명[인덱스]시는 &를 붙임
+
+NULL, 0, \0	=> 결과적으로 NULL은 숫자 0이다
+문자열의 끝에는 문자열의 끝을 알리는 용도로 NULL이 자동으로 추가된다
+
+선택 정렬 : 오름차순 2 4 6 7 8
+	  해당값 오름차순 : 첫번째 값을 기준으로 다음번째 값과 비교
+
+	  내림차순 8 7 6 4 2
+
+
+#include<stdio.h>
+void main() {
+	int arr[5] = { 10,20,30 };
+	printf("%d %d %d %d %d\n", arr[0], arr[1], arr[2], arr[3], arr[4]);
+	printf("======\n");
+	for (int i = 0; i < 5; i++) {
+		printf("%d\n", arr[i]);
+	}
+	printf("======\n");
+	int n;
+	printf("%d\n", sizeof(n));
+	printf("%d %d\n", sizeof(arr),sizeof(int));
+	printf("%d\n", sizeof(arr) / sizeof(int));
+	printf("======\n");
+	for (int i = 0; i < sizeof(arr) / sizeof(int); i++) {
+		printf("%d\n", arr[i]);
+	}
+}
+
+#include<stdio.h>
+void main() {
+	/*
+	int arr[5];
+	printf("수 입력(5) : ");
+	for (int i = 0; i < 5; i++) {
+		scanf_s("%d", &arr[i]); 
+	}
+	for (int i = 0; i < 5; i++) {
+		printf("%d번째 : %d\n", i, arr[i]);
+	}
+	*/
+	char str[20] = { "test" };
+	printf("%c %c %c %c\n", str[0], str[1], str[2], str[3]);
+	printf("%s\n", str);
+	printf("%d, %d\n", sizeof(char), sizeof(str));
+	printf("문자열 입력 : ");
+	scanf_s("%s", str, sizeof(str));		char에는 &붙이지 않음
+}
+
+#include<stdio.h>
+void main() {
+	char str[10];
+	printf("test 입력 : ");
+	scanf_s("%s", str, 10);
+	for (int i = 0; i < 10; i++) {
+		printf("%c ", str[i]);		문자 뒤에 남는 공간에 ?가 생김
+	}
+	printf("\n%s\n", str);
+
+#include<stdio.h>
+void main() {
+	char str[10];
+	printf("test 입력 : ");
+	scanf_s("%s", str, 10);
+	for (int i = 0; str[i] != 0; i++) {	문자 뒤에 남는 공간의 ?가 없어짐
+		printf("%c ", str[i]);
+	}
+	printf("\n%s\n", str);

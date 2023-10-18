@@ -1,0 +1,4 @@
+﻿  ex02.cpp
+D:\코딩\3-2_C언어\day11\day11\ex02.cpp(7,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\코딩\3-2_C언어\day11\day11\ex02.cpp(45,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  day11.vcxproj -> D:\코딩\3-2_C언어\day11\x64\Debug\day11.exe

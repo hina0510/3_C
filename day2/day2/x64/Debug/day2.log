@@ -1,0 +1,4 @@
+﻿  ex04.c
+D:\코딩\3-2_C언어\day2\day2\ex04.c(7,8): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+D:\코딩\3-2_C언어\day2\day2\ex04.c(11,8): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  day2.vcxproj -> D:\코딩\3-2_C언어\day2\x64\Debug\day2.exe

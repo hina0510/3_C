@@ -1,0 +1,29 @@
+random : 임의의 수를 뽑아준다
+	stdlib.h 사용
+	seed(초기값)을 설정해줘야 한다
+	설정하지 않으면 기본 1을 초기값으로 보고 연산
+	초기값은 계속 변하는 수를 넣어줘야 한다
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+void main() {
+	printf("time : %u\n", time(0));
+	srand(time(0));
+	for (int i = 0; i < 5; i++) {
+		int ran = rand();
+		printf("%d\n", ran);
+	}
+}
+
+srand(time(0));	는 반복문 안에서 사용하면 같은 값 출력(for문 출력 시간이 빨라서 시간이 1초 지나기 전에 출력)
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+#include<conio.h> =>인풋, 아웃풋
+#define a printf("test")	=>왼쪽값을 오른쪽값으로 실행 (a치면 test실행)
+
+ESC(대문자)로 키 사용 가능
+break(=ESC) : swich, 반복문 안에서만 사용가능하며, break를 만나면 해당 제어문을 나온다
+continue : 반복문에서만 사용한다. continue를 만나면 반복문 위로 이동
+break, continue 뒤에 문장이 들어가면 출력되지 않음
+
+#include<stdio.h>
+#include<conio.h>
+void main() {
+	char ch;
+	while (1) {
+		//scanf_s("%c", &ch, 1);	<=enter키를 사용해 실행
+		ch = _getch();	<=바로 실행
+		switch (ch) {
+		case 'w':printf("^^^ 이동\n"); break;
+		case 'a':printf("<<< 이동\n"); break;
+		case 's':printf("아래로 이동\n"); break;
+		case 'd':printf(">>> 이동\n"); break;
+		}
+	}
+
+}
+
+
+
+#include<stdio.h>
+#include<conio.h>
+#define ESC 27
+void main() {
+	char ch;
+	//while ((ch = _getch()) != ESC) {
+	for(; (ch = _getch()) != ESC;){
+		if (ch >= 'a' && ch <= 'z')
+			ch = ch - 32;
+		if (ch == 'Q')
+			break;	=ESC
+		printf("%c\n", ch);
+	}
+
+
+void main() {
+	int i = 0, sum = 0;
+	while (i <= 5) {
+		i++;
+		sum += i;
+	}
+	printf("sum : %d, i : %d\n", sum, i); =>sum:21, i:6
+}
+
+
+
+void main() {
+	int i = 0, sum = 0;
+	do {
+		i++;		=>i:1
+		sum += i;	=>sum=1
+	} while (i <= -5);		=>1<=-5 거짓
+	printf("sum : %d, i : %d\n", sum, i);  =>sum:1,i:1
+}
+

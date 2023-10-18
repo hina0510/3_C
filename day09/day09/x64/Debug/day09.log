@@ -1,0 +1,3 @@
+﻿  ex06.cpp
+D:\코딩\3-2_C언어\day09\day09\ex06.cpp(14,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  day09.vcxproj -> D:\코딩\3-2_C언어\day09\x64\Debug\day09.exe

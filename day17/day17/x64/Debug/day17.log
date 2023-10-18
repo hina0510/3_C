@@ -1,0 +1,3 @@
+﻿  ex05.c
+D:\코딩\3-2_C언어\day17\day17\ex05.c(9,15): warning C4101: 'p' :참조되지 않은 지역 변수입니다.
+  day17.vcxproj -> D:\코딩\3-2_C언어\day17\x64\Debug\day17.exe

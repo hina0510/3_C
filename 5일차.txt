@@ -1,0 +1,42 @@
+스위치
+#include<stdio.h>
+void main() {
+	int num;
+	printf("수 입력 : ");
+	scanf_s("%d", &num);
+	switch (num) {
+	case 1:printf("1입력"); break;	=>if(num==1)
+	case 2:printf("2입력"); break;	=>else if(num==2)
+	default:printf("1,2를 제외한 값입력");	=>else
+	}
+}
+
+case 의 마지막에 break를 넣어야 한다(안넣으면 다음것도 실행)
+
+헤더파일의 종류
+#include<stdio.h> <=표준입출력 함수 헤더파일
+	printf
+	scanf_s
+#include<stdlib.h> <=표준 유틸리티 함수 헤더파일
+	system(함수){
+	case 1 : break;
+}
+	while(1){	<=1은 참일 동안, 0은 거짓이라 실행 안됨
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
